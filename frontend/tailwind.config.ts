@@ -23,6 +23,9 @@ const config: Config = {
           wine: "#521110",
         },
       },
+      boxShadow: {
+        blue: "1px 1px 37px 0px rgba(80,163,217,0.3)",
+      },
     },
   },
   plugins: [],

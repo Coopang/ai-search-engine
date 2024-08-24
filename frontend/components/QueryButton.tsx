@@ -2,15 +2,18 @@ import { cva, VariantProps } from "class-variance-authority";
 import React from "react";
 import { Icons } from "./Icons";
 
-const styles = cva("px-5 py-1 rounded-full font-bold flex gap-2 items-center", {
-  variants: {
-    color: {
-      green: "bg-main-green/10 text-main-green",
-      blue: "bg-main-blue/10 text-main-blue",
-      red: "bg-main-red/10 text-main-red",
+const styles = cva(
+  "px-5 py-1 rounded-full font-semibold flex gap-2 items-center text-nowrap",
+  {
+    variants: {
+      color: {
+        green: "bg-main-green/10 text-main-green",
+        blue: "bg-main-blue/10 text-main-blue",
+        red: "bg-main-red/10 text-main-red",
+      },
     },
-  },
-});
+  }
+);
 
 type Props = {
   children: React.ReactNode;
