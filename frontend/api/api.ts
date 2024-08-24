@@ -8,3 +8,7 @@ export const searchData = async (query: string) => {
   //   const params = new URLSearchParams(query);
   return instance.get("/model/search?prompt=" + query);
 };
+
+export const getTrends = async () => {
+  return instance.get("/trends");
+};
