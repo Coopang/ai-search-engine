@@ -9,7 +9,7 @@ import ProgressBar from "./ProgressBar";
 type Props = {};
 
 const QueryBuilder = (props: Props) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [step, setStep] = useState(0);
   const ChevronRightIcon = Icons["chevronRight"];
 
