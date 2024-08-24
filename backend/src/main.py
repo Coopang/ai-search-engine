@@ -58,4 +58,4 @@ async def request_trends():
 
     trends = {f'rank{rank}': trend_content for rank, trend_content in enumerate(top_trending[0], start=1)}
 
-    return trends
+    return trends[:3]
