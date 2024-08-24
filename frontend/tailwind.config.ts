@@ -72,6 +72,16 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      colors: {
+        main: {
+          red: "#D73227",
+          cream: "#FAFAFA",
+          green: "#92BA3E",
+          blue: "#50A3D9",
+          yellow: "#E99923",
+          wine: "#521110",
+        },
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
