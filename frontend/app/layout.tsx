@@ -6,6 +6,7 @@ import QueryButton from "@/components/QueryButton";
 import SearchBar from "@/components/SearchBar";
 import TrendingTopics from "@/components/TrendingTopics";
 import SearchSuggestions from "@/components/SearchSuggestions";
+import QueryBuilder from "@/components/QueryBuilder";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
           <TrendingTopics />
           <SearchBar />
           <SearchSuggestions />
+          <QueryBuilder />
           <div>{children}</div>
         </main>
       </body>
