@@ -5,6 +5,8 @@ import TopBar from "@/components/TopBar";
 import QueryButton from "@/components/QueryButton";
 import SearchBar from "@/components/SearchBar";
 import TrendingTopics from "@/components/TrendingTopics";
+import SearchSuggestions from "@/components/SearchSuggestions";
+import QueryBuilder from "@/components/QueryBuilder";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,9 +25,12 @@ export default function RootLayout({
       <body className={`${inter.className} bg-main-cream`}>
         <TopBar />
 
-        <main className="flex flex-col items-center space-y-10 my-20">
+        <main className="flex flex-col items-center space-y-20 my-20 container m-auto">
           <TrendingTopics />
           <SearchBar />
+          <SearchSuggestions />
+          <QueryBuilder />
+          <div>{children}</div>
         </main>
         <div className="container m-auto">{children}</div>
       </body>

@@ -10,7 +10,7 @@ const TrendingTopics = (props: Props) => {
         What's trending in,{" "}
         <span className="font-bold text-main-red">Seoul?</span>
       </p>
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-5 flex-wrap justify-center">
         <QueryButton color="blue" iconRight="trendingUp">
           Seoul Pride summer outfit
         </QueryButton>
