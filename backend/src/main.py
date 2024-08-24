@@ -19,31 +19,10 @@ app = FastAPI()
 
 load_dotenv()
 
-def test_connection():
-    try:
-        connection = connect(
-            host=sqlenv.MYSQL_HOST,
-            port=sqlenv.MYSQL_PORT,
-            password=sqlenv.MYSQL_ROOT_PASSWORD,
-            user=sqlenv.MYSQL_USERNAME
-        )
-        cursor = connection.cursor()
-        cursor.execute("SELECT 1")  # 간단한 쿼리 실행
-        cursor.fetchone()  # 결과를 가져옵니다.
-        cursor.close()
-        connection.close()
-        return True
-    except Exception as e:
-        print(f"Connection error: {e}")
-        return False
+
 
 @app.get(API_PREFIX + '/model/search')
 async def search(prompt: Annotated[str, Query(max_length=255)]) -> List[Item]:
-    # 연결 테스트
-    if not test_connection():
-        return {"error": "Database connection failed"}, 500
-    print(sqlenv.MYSQL_HOST)
-    print(sqlenv.MYSQL_PORT)
     connection = connect(
         host=sqlenv.MYSQL_HOST,
         port=sqlenv.MYSQL_PORT,
