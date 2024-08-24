@@ -11,7 +11,7 @@ import { Badge } from "../ui/badge";
 import { TiThumbsDown, TiThumbsUp } from "react-icons/ti";
 import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
 
-const ProductCard = () => {
+const ProductCard = ({ image, title, description, price }: any) => {
   return (
     <Card className=" border-none shadow-md overflow-hidden">
       <div className="relative w-full h-0 pb-[100%] ">
@@ -24,12 +24,12 @@ const ProductCard = () => {
         />
       </div>
       <CardHeader>
-        <CardTitle>This is a Title</CardTitle>
-        <CardDescription className="text-lg">
+        <CardTitle>{title}</CardTitle>
+        {/* <CardDescription className="text-lg">
           Description of the product
-        </CardDescription>
+        </CardDescription> */}
         <CardDescription className="text-2xl font-bold text-[#51A3D9]">
-          $10,000
+          ₩{price?.toLocaleString()}
         </CardDescription>
       </CardHeader>
       <CardFooter className="justify-between">

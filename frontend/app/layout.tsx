@@ -8,6 +8,7 @@ import TrendingTopics from "@/components/TrendingTopics";
 import SearchSuggestions from "@/components/SearchSuggestions";
 import QueryBuilder from "@/components/QueryBuilder";
 import QueryClientProvider from "@/lib/queryClientProvider";
+import Search from "@/components/Search";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,12 +29,9 @@ export default function RootLayout({
           <TopBar />
           <main className="flex flex-col items-center space-y-20 my-20 container m-auto">
             <TrendingTopics />
-            <SearchBar />
-            <SearchSuggestions />
-            <QueryBuilder />
-            <div>{children}</div>
+            <Search />
+            <div className="container m-auto">{children}</div>
           </main>
-          <div className="container m-auto">{children}</div>
         </QueryClientProvider>
       </body>
     </html>

@@ -7,12 +7,8 @@ import { useMutation } from "@tanstack/react-query";
 
 type Props = {};
 
-const SearchBar = (props: Props) => {
+const SearchBar = ({ onSubmit }: any) => {
   const SearchIcon = Icons["search"];
-  const { data, mutate } = useMutation({
-    mutationFn: searchData,
-    mutationKey: ["searchResults"],
-  });
 
   const formik = useFormik({
     initialValues: {
@@ -21,13 +17,10 @@ const SearchBar = (props: Props) => {
     onSubmit: async ({ query }) => {
       try {
         console.log(query);
-        mutate(query);
-        // let result = await searchData(query);
+        onSubmit(query);
       } catch (error) {}
     },
   });
-
-  console.log(data);
 
   return (
     <form
