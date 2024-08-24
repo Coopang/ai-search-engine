@@ -34,7 +34,6 @@ const Button = ({
   children,
   intent,
   size,
-
   type,
   fullWidth,
   onClick,

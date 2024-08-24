@@ -6,7 +6,7 @@ type Props = {};
 const SearchBar = (props: Props) => {
   const SearchIcon = Icons["search"];
   return (
-    <div className="relative w-[1000px] max-w-full rounded-full pl-5 pr-12 py-5 bg-white border-2 border-main-blue focus-within:shadow-blue transition-all">
+    <form className="relative w-[1000px] max-w-full rounded-full pl-5 pr-12 py-5 bg-white border-2 border-main-blue focus-within:shadow-blue transition-all">
       <input
         className="w-full text-lg  placeholder:text-slate-300 font-light focus:outline-none"
         type="text"
@@ -18,7 +18,7 @@ const SearchBar = (props: Props) => {
       >
         <SearchIcon size={30} />
       </button>
-    </div>
+    </form>
   );
 };
 

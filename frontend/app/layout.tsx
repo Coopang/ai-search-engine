@@ -24,7 +24,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-main-cream`}>
         <TopBar />
-
         <main className="flex flex-col items-center space-y-20 my-20 container m-auto">
           <TrendingTopics />
           <SearchBar />
