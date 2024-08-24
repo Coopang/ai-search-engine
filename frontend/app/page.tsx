@@ -11,7 +11,7 @@ export default function Home() {
     filters: { mutationKey: ["searchResults"] },
   });
 
-  const data = state[state?.length - 1];
+  const data: any = state[state?.length - 1];
   console.log(data);
   return (
     <div className="grid gap-5 sm:grid-cols-3 lg:grid-cols-4 ">
