@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/TopBar";
 import QueryButton from "@/components/QueryButton";
+import SearchBar from "@/components/SearchBar";
+import TrendingTopics from "@/components/TrendingTopics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +23,10 @@ export default function RootLayout({
       <body className={`${inter.className} bg-main-cream`}>
         <TopBar />
 
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-          {children}
+        <main className="flex flex-col items-center space-y-10 my-20">
+          <TrendingTopics />
+          <SearchBar />
+          <div>{children}</div>
         </main>
       </body>
     </html>
