@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import TopBar from "@/components/TopBar";
+import QueryButton from "@/components/QueryButton";
+import SearchBar from "@/components/SearchBar";
+import TrendingTopics from "@/components/TrendingTopics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-main-cream`}>
+        <TopBar />
+
+        <main className="flex flex-col items-center space-y-10 my-20">
+          <TrendingTopics />
+          <SearchBar />
+          <div>{children}</div>
+        </main>
+      </body>
     </html>
   );
 }

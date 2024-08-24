@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply text-main-wine;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
