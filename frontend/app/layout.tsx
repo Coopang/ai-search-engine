@@ -32,6 +32,7 @@ export default function RootLayout({
           <QueryBuilder />
           <div>{children}</div>
         </main>
+        <div className="container m-auto">{children}</div>
       </body>
     </html>
   );

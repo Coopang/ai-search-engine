@@ -57,16 +57,35 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-  
+}
+
 body {
   @apply text-main-wine;
+  /* @apply bg-background text-foreground; */
 }
 
 @layer base {
   * {
-    @apply border-border;
+    /* @apply border-border; */
   }
   body {
-    @apply bg-background text-foreground;
   }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+}
+
+.swiper-slide {
+  /* font-size: 18px; */
+  background: red;
+  /* height: calc((100% - 30px) / 2) !important; */
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
