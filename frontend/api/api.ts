@@ -1,14 +1,10 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http:127.0.0.1:8000/api/v1/",
+  baseURL: process.env.NEXT_PUBLIC_BASE_URL,
 });
 
 export const searchData = async (query: string) => {
   //   const params = new URLSearchParams(query);
-  return instance.get("/search?prompt=" + query);
+  return instance.get("/model/search?prompt=" + query);
 };
-
-// export const getPastQueries = async () => {
-//   return instance.get("getPast");
-// };
