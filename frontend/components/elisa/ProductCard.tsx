@@ -12,11 +12,13 @@ import { TiThumbsDown, TiThumbsUp } from "react-icons/ti";
 import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
 
 const ProductCard = ({ image, title, description, price }: any) => {
+  console.log(image);
+
   return (
-    <Card className=" border-none shadow-md overflow-hidden">
+    <Card className=" border-none shadow-blueFaint overflow-hidden">
       <div className="relative w-full h-0 pb-[100%] ">
         <Image
-          src="/dress.jpg"
+          src={image}
           width={200}
           height={200}
           alt="Picture of the author"

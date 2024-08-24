@@ -13,6 +13,7 @@ const SearchResults = ({ data, isPending }: any) => {
             title={d?.title}
             price={d?.price}
             key={d?.title + d?.id}
+            image={d?.image_url}
           />
         ))}
       </div>
