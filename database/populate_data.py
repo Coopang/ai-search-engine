@@ -6,11 +6,9 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-
 if __name__ == '__main__':
     data = []
-
-    with open('./data/prod-processed-clothes.csv', newline='') as csvfile:
+    with open('prod-processed-clothes.csv', newline='', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
 
         next(reader)
