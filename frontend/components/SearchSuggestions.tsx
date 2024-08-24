@@ -11,16 +11,27 @@ const outfitQueries = [
   "Sporty look for a day at the park...",
 ];
 
-const SearchSuggestions = (props: Props) => {
+const SearchSuggestions = ({ data }: any) => {
+  console.log(data);
   return (
     <div className="flex flex-col items-center gap-5">
-      <p className="font-bold">Need some inspiration? Try one of these...</p>
+      {data ? (
+        <p className="font-bold">Related searches...</p>
+      ) : (
+        <p className="font-bold">Need some inspiration? Try one of these...</p>
+      )}{" "}
       <div className="flex flex-wrap items-center gap-5 justify-center">
-        {outfitQueries.map((d) => (
-          <QueryButton key={d} color={"green"} iconRight="chevronRight">
-            {d}
-          </QueryButton>
-        ))}
+        {data
+          ? Object.keys(data).map((d: string) => (
+              <QueryButton key={d} color={"green"} iconRight="chevronRight">
+                {data.d}
+              </QueryButton>
+            ))
+          : outfitQueries.map((d) => (
+              <QueryButton key={d} color={"green"} iconRight="chevronRight">
+                {d}
+              </QueryButton>
+            ))}
       </div>
     </div>
   );
