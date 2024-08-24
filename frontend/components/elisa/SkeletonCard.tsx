@@ -1,4 +1,4 @@
-import { Skeleton } from "@/components/shadcn-ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const SkeletonCard = () => {
   return (

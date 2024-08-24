@@ -26,8 +26,8 @@ export default function RootLayout({
         <main className="flex flex-col items-center space-y-10 my-20">
           <TrendingTopics />
           <SearchBar />
-          <div>{children}</div>
         </main>
+        <div className="container m-auto">{children}</div>
       </body>
     </html>
   );
