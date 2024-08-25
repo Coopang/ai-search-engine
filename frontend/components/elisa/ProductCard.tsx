@@ -11,7 +11,7 @@ import { Badge } from "../ui/badge";
 import { TiThumbsDown, TiThumbsUp } from "react-icons/ti";
 import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
 
-const ProductCard = ({ image, title, description, price }: any) => {
+const ProductCard = ({ image, title, similarity, price }: any) => {
   console.log(image);
 
   return (
@@ -35,7 +35,11 @@ const ProductCard = ({ image, title, description, price }: any) => {
         </CardDescription>
       </CardHeader>
       <CardFooter className="justify-between">
-        <Badge className="bg-[#E9F1D8] text-[#6D8C29] text-sm">80% MATCH</Badge>
+        {similarity ? (
+          <Badge className={`${"bg-main-wine/10 text-main-wine"} text-sm`}>
+            {Math.round(similarity * 100)}% MATCH
+          </Badge>
+        ) : null}
         <div className="flex gap-1">
           <Badge className="bg-[#51A3D9] text-white p-1.5">
             <FaRegThumbsUp />
