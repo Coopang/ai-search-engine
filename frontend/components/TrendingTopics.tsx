@@ -29,7 +29,7 @@ const TrendingTopics = () => {
         className="text-main-wine
       "
       >
-        What's trending in,
+        What's trending in,{" "}
         <span className="font-bold text-main-red">Seoul?</span>
       </p>
       <div className="flex items-center gap-5 flex-wrap justify-center">

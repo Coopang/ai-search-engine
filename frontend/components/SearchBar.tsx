@@ -14,10 +14,10 @@ const SearchBar = ({ onSubmit }: any) => {
     initialValues: {
       query: "",
     },
-    onSubmit: async ({ query }) => {
+    onSubmit: async ({ query }, { resetForm }) => {
       try {
-        console.log(query);
         onSubmit(query);
+        resetForm();
       } catch (error) {}
     },
   });
@@ -30,6 +30,7 @@ const SearchBar = ({ onSubmit }: any) => {
       <input
         name="query"
         onChange={formik.handleChange}
+        value={formik.values.query}
         className="w-full text-lg  placeholder:text-slate-300 font-light focus:outline-none"
         type="text"
         placeholder="What are you looking for?"

@@ -17,7 +17,7 @@ const ProductCard = ({ image, title, description, price }: any) => {
   return (
     <Card className=" border-none shadow-blueFaint overflow-hidden">
       <div className="relative w-full h-0 pb-[100%] ">
-        <Image
+        <img
           src={image}
           width={200}
           height={200}

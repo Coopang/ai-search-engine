@@ -11,8 +11,20 @@ const outfitQueries = [
   "Sporty look for a day at the park...",
 ];
 
-const SearchSuggestions = ({ data, mutate }: any) => {
+const SearchSuggestions = ({ data, mutate, isPending }: any) => {
   console.log(data ? Object.keys(data) : null);
+
+  if (isPending) {
+    return (
+      <div className="flex flex-wrap gap-5 items-center justify-center">
+        <div className="py-3 px-20 rounded-full bg-slate-200 animate-pulse w-[400px]" />
+        <div className="py-3 px-20 rounded-full bg-slate-200 animate-pulse w-[400px]" />
+        <div className="py-3 px-20 rounded-full bg-slate-200 animate-pulse w-[350px]" />
+        <div className="py-3 px-20 rounded-full bg-slate-200 animate-pulse w-[350px]" />
+        <div className="py-3 px-20 rounded-full bg-slate-200 animate-pulse w-[350px]" />
+      </div>
+    );
+  }
   return (
     <div className="flex flex-col items-center gap-5">
       {data ? (
@@ -24,7 +36,7 @@ const SearchSuggestions = ({ data, mutate }: any) => {
         {data
           ? Object.keys(data).map((d: string) => (
               <QueryButton
-                onClick={() => mutate(d)}
+                onClick={() => mutate(data[d])}
                 key={d}
                 color={"green"}
                 iconRight="chevronRight"
