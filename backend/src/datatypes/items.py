@@ -8,3 +8,5 @@ class Item(BaseModel):
     reviews_cnt: int
     rating: float
     image_url: str
+    similarity: float
+
