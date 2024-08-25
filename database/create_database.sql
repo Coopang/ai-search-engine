@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS products(
     category VARCHAR(63) NOT NULL,
     reviews_count INT UNSIGNED NOT NULL DEFAULT 0,
     rating DECIMAL(2, 1) NOT NULL DEFAULT 0,
-    image_url VARCHAR(255) NOT NULL
+    image_url VARCHAR(4095) NOT NULL
 );
 -- TABLE prompts --
 CREATE TABLE IF NOT EXISTS prompts(
