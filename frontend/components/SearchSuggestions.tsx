@@ -11,8 +11,8 @@ const outfitQueries = [
   "Sporty look for a day at the park...",
 ];
 
-const SearchSuggestions = ({ data }: any) => {
-  console.log(data);
+const SearchSuggestions = ({ data, mutate }: any) => {
+  console.log(data ? Object.keys(data) : null);
   return (
     <div className="flex flex-col items-center gap-5">
       {data ? (
@@ -23,12 +23,22 @@ const SearchSuggestions = ({ data }: any) => {
       <div className="flex flex-wrap items-center gap-5 justify-center">
         {data
           ? Object.keys(data).map((d: string) => (
-              <QueryButton key={d} color={"green"} iconRight="chevronRight">
-                {data.d}
+              <QueryButton
+                onClick={() => mutate(d)}
+                key={d}
+                color={"green"}
+                iconRight="chevronRight"
+              >
+                {data[d]}
               </QueryButton>
             ))
           : outfitQueries.map((d) => (
-              <QueryButton key={d} color={"green"} iconRight="chevronRight">
+              <QueryButton
+                onClick={() => mutate(d)}
+                key={d}
+                color={"green"}
+                iconRight="chevronRight"
+              >
                 {d}
               </QueryButton>
             ))}

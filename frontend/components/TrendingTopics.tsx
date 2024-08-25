@@ -20,7 +20,6 @@ const TrendingTopics = () => {
     refetchInterval: 30000,
   });
 
-  console.log(useIsFetching);
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error loading trends.</p>;
 
@@ -34,22 +33,13 @@ const TrendingTopics = () => {
         <span className="font-bold text-main-red">Seoul?</span>
       </p>
       <div className="flex items-center gap-5 flex-wrap justify-center">
-        <QueryButton
-          color="blue"
-          iconRight="trendingUp"
-        >
+        <QueryButton color="blue" iconRight="trendingUp">
           {data?.rank1}
         </QueryButton>
-        <QueryButton
-          color="blue"
-          iconRight="trendingUp"
-        >
+        <QueryButton color="blue" iconRight="trendingUp">
           {data?.rank2}
         </QueryButton>
-        <QueryButton
-          color="blue"
-          iconRight="trendingUp"
-        >
+        <QueryButton color="blue" iconRight="trendingUp">
           {data?.rank3}
         </QueryButton>
       </div>

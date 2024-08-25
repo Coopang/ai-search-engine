@@ -9,6 +9,8 @@ import SearchSuggestions from "@/components/SearchSuggestions";
 import QueryBuilder from "@/components/QueryBuilder";
 import QueryClientProvider from "@/lib/queryClientProvider";
 import Search from "@/components/Search";
+import SearchResults from "@/components/SearchResults";
+import SearchResultsSkeleton from "@/components/elisa/SkeletonCard";
 
 const inter = Inter({ subsets: ["latin"] });
 

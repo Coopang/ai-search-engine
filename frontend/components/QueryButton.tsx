@@ -19,7 +19,7 @@ type Props = {
   children: React.ReactNode;
   iconLeft?: keyof typeof Icons;
   iconRight?: keyof typeof Icons;
-  onClick?: (args: any) => void;
+  onClick?: () => void;
   type?: "button" | "submit";
 };
 
@@ -28,12 +28,13 @@ const QueryButton = ({
   color,
   iconLeft,
   iconRight,
+  onClick,
 }: Props & VariantProps<typeof styles>) => {
   const IconLeft = Icons[iconLeft ? iconLeft : "chevronRight"];
   const IconRight = Icons[iconRight ? iconRight : "chevronRight"];
 
   return (
-    <button className={styles({ color })}>
+    <button onClick={onClick} className={styles({ color })}>
       {iconLeft ? <IconLeft size={20} strokeWidth={3} /> : null}
       {children}
       {iconRight ? <IconRight size={20} strokeWidth={3} /> : null}

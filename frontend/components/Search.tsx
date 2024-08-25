@@ -18,9 +18,9 @@ const Search = (props: Props) => {
   return (
     <div className="flex flex-col items-center space-y-20 my-20 container m-auto">
       <SearchBar onSubmit={mutate} />
-      <SearchSuggestions data={data?.data?.results} />
-      <SearchResults data={data} isPending={isPending} />
-      <QueryBuilder />
+      <SearchSuggestions mutate={mutate} data={data?.data?.results} />
+      <SearchResults data={data?.data} isPending={isPending} />
+      {/* <QueryBuilder /> */}
     </div>
   );
 };

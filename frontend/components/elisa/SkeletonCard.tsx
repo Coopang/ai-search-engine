@@ -32,4 +32,25 @@ const SkeletonCard = () => {
   );
 };
 
-export default SkeletonCard;
+const SearchResultsSkeleton = () => {
+  return (
+    <div className="grid gap-5 sm:grid-cols-3 lg:grid-cols-4 w-full">
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+    </div>
+  );
+};
+
+export default SearchResultsSkeleton;

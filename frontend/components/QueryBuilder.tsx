@@ -42,13 +42,13 @@ const QueryBuilder = (props: Props) => {
           help!
         </span>
       </p>
-      <button
+      {/* <button
         onClick={toggleModal}
         className="flex items-center text-center justify-center underline m-auto"
       >
         Try our search assistant
         <ChevronRightIcon size={15} />
-      </button>
+      </button> */}
       <Dialog open={open} onClose={toggleModal}>
         <DialogBackdrop className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm" />
         <div className="fixed inset-0 flex w-screen items-center justify-center p-4">

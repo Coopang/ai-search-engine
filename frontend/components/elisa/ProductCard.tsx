@@ -26,7 +26,7 @@ const ProductCard = ({ image, title, description, price }: any) => {
         />
       </div>
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="text-lg">{title}</CardTitle>
         {/* <CardDescription className="text-lg">
           Description of the product
         </CardDescription> */}
