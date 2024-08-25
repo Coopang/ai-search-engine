@@ -3,7 +3,7 @@ import React from "react";
 import { Icons } from "./Icons";
 
 const styles = cva(
-  "px-5 py-1 rounded-full font-semibold flex gap-2 items-center text-nowrap",
+  "px-5 py-1 rounded-full font-medium flex gap-2 items-center text-nowrap",
   {
     variants: {
       color: {
