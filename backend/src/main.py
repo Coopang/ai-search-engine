@@ -109,7 +109,7 @@ async def search(prompt: Annotated[str, Query(max_length=255)]):
     cursor.close()
     connection.close()
 
-    model = genai.GenerativeModel(model_name='gemini-1.5-pro-latest')
+    model = genai.GenerativeModel(model_name='gemini-1.5-flash')
     response = model.generate_content(f"can you give me 5 sentences that can refine or specify by nuances the user's query '{prompt}'. No additional explanation, just the sentence.")
 
     sentences = response.text.strip().split("\n")
