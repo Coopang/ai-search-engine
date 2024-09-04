@@ -1,5 +1,5 @@
 ---
-name: 🐛Bug Report
+name: 🐛 Bug Report
 about: Report a bug found in the service.
 title: ""
 labels: ""
