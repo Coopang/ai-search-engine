@@ -1,12 +1,12 @@
 ---
-name: Task Issue
+name: ✅Task Issue
 about: Create a project task.
 title: ""
 labels: ""
 assignees: ""
 ---
 
-### 어떤 기능인가요?
+### Task Description
 
 Briefly describe the feature or task to be implemented.
 
