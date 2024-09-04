@@ -1,5 +1,5 @@
 ---
-name: ✅Task Issue
+name: ✅ Task Issue
 about: Create a project task.
 title: ""
 labels: ""
@@ -12,7 +12,7 @@ Briefly describe the feature or task to be implemented.
 
 ### Task List
 
-[ ] Outline each task or step needed to complete this issue
+- [ ] Outline each task or step needed to complete this issue
 
 ### Relevant Links/References
 
