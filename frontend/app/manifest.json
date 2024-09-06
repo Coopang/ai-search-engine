@@ -1,0 +1,26 @@
+{
+  "theme_color": "#521110",
+  "background_color": "#fafafa",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "icon512_maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "icon512_rounded.png",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "any",
+  "display": "standalone",
+  "display_override": ["fullscreen", "minimal-ui"],
+  "dir": "auto",
+  "lang": "en",
+  "name": "ChatPang",
+  "short_name": "ChatPang",
+  "start_url": "/"
+}
